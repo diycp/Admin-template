@@ -67,78 +67,115 @@
                 
                     <div id="main">
                         <div id="content">
-                            <h2>ECMall 动态</h2>
-                            <div>
-                                <p>
-                                    ECMall 2.2.1 发布，期待您参与测试。2010-09-28 
-                                    <a href="">查看详情</a> <a href="">BUG反馈</a>
-                                </p>
-                                <p>
-                                    ECMall 安全补丁，V2.1和V2.2用户务必更新！2010-07-19
-                                    <a href="">查看详情</a>
-                                </p>
-                            </div>
-                            <h2>一周动态</h2>
-                            <div>
-                                <table>
+                            <form method="post" class="form_h" >
+                                <table class="form_h">
                                     <tr>
-                                        <th class="specalt">新增会员数:  </th>
-                                        <td>3   </td>
-                                        <th class="specalt">新增店铺数/申请数:  </th>
-                                        <td>0/0</td>
+                                        <th>
+                                            <label for="name">Name</label>
+                                        </th>
+                                        <td>
+                                            <input class="input-small" type="text" value="" name="name" id="name"/>
+                                        </td>
                                     </tr>
+
                                     <tr>
-                                        <th class="specalt">新增商品数:  </th>
-                                        <td>0   </td>
-                                        <th class="specalt">新增订单数:  </th>
-                                        <td>0</td>
+                                        <th>
+                                            <label for="mail">E-Mail</label>
+                                        </th>
+                                        <td>
+                                            <input class="input-medium" type="text" value="" name="mail" id="mail"/>
+                                        </td>
                                     </tr>
-                                </table>
-                            </div>
-                            <h2>统计信息</h2>
-                            <div>
-                               <table>
-                                   <tr>
-                                       <th class="specalt">会员总数: </th>
-                                       <td>3</td>
-                                       <th class="specalt">店铺总数/申请总数:  </th>
-                                       <td>1/0</td>
+
+                                    <tr>
+                                        <th>
+                                            <label for="url">Your Website </label>
+                                        </th>
+                                        <td>
+                                            <input class="input-big" type="text" value="" name="url" id="url"/>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <label for="flex">Flexfield </label>
+                                        </th>
+                                        <td>
+                                            <input class="input-flex" type="text" value="" name="flex" id="flex"/>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <label for="date">Date</label>
+                                        </th>
+                                        <td>
+                                            <input class="input-small flexy_datepicker_input" type="text" value="__ / __ / ____" name="flexy_datepicker" id="date"/>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <label for="selectbox">List</label>
+                                        </th>
+                                        <td>
+                                            <select name="selectbox" id="selectbox" >
+                                                <option value="">Choose an option</option>
+                                                <option value="1">Home</option>
+                                                <option value="2">Member</option>
+                                                <option value="3">Portfolio</option>
+                                                <option value="4">Blog</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Radio</th>
+                                        <td>
+                                            <label for="radiobutton1" class="inline">True</label>
+                                            <input id="radiobutton1" name="radiobutton" type="radio" value="1" class="jquery_improved" checked="checked"/>
+                                            
+                                            <label for="radiobutton2" class="inline">False</label>
+                                            <input id="radiobutton2" name="radiobutton" type="radio" value="2" class="jquery_improved"/>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Checkbox</th>
+                                        <td>
+                                            <label for="checkbox1" class="inline">True</label>
+                                            <input type="checkbox" value="1" name="checkbox1" id="checkbox1" />
+                                            <label for="checkbox2" class="inline">False</label>
+                                            <input type="checkbox" value="2" name="checkbox2" id="checkbox2" />
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                       <th class="vat">
+                                           <label for="textarea">Enter some Text</label>
+                                       </th>
+                                       <td>
+                                           <textarea name="textarea" id="textarea"></textarea>
+                                       </td>
                                    </tr>
+
                                    <tr>
-                                       <th class="specalt">商品总数:</th>
-                                       <td>29  </td>
-                                       <th class="specalt">订单总数:</th>
-                                       <td>7</td>
+                                       <th class="vat">
+                                           <label for="textarea2">Rich text</label>
+                                       </th>
+                                       <td>
+                                           <textarea name="textarea" id="textarea2" class="richtext" cols="60" rows="15"></textarea>
+                                       </td>
                                    </tr>
+
                                    <tr>
-                                       <th class="specalt">订单总金额:  </th>
-                                       <td>¥1,165.00</td>
-                                   </tr>
-                               </table>
-                            </div>
-                            <h2>系统信息</h2>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <th class="specalt">服务器操作系统: </th>
-                                        <td>WINNT   WEB </td>
-                                        <th class="specalt">服务器:</th>
-                                        <td>Apache/2.2.9 (APMServ) PHP/5.2.6</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="specalt">PHP 版本: </th>
-                                        <td>5.2.6   </td>
-                                        <th class="specalt">MYSQL 版本:   </th>
-                                        <td>5.1.28-rc-community-log</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="specalt">ECMall 版本:</th>
-                                        <td>2.2.1 20100928  </td>
-                                        <th class="specalt">安装日期:</th>
-                                        <td>2012-08-09</td>
-                                    </tr>
-                                </table>
-                            </div>
+                                    <th></th>
+                                    <td>
+                                        <input class="button" name="submit" type="submit" value="Submit"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
                         </div>
                         <!--end content-->
                         

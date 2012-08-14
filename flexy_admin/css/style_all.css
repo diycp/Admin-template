@@ -109,6 +109,10 @@ body{
 	color:#484848;
 	position:relative;
 	}
+
+html body {
+	background-position: 0 -79px;
+}
 	
 #top{
 	position:relative;
@@ -124,7 +128,7 @@ body{
 	#head{
 		position:relative;
 		background:transparent url(../images/bg_head.png) no-repeat;
-		height:199px;
+		height:120px;
 		color:#fff;
 		}
 		
@@ -140,14 +144,14 @@ body{
 		}
 	
 	.logo a{
-		width:234px;
-		height:90px;
+		width:202px;
+		height:44px;
 		display:block;
 		position:absolute;	
 		text-indent:-99999px;
 		background:transparent url(../images/logo.png) no-repeat;
-		top:30px;
-		left:30px;
+		top:20px;
+		left:65px;
 		outline:none;
 		z-index:1;
 		}
@@ -379,12 +383,33 @@ body{
 				/*----------------------------------------
 				2.2.3.3) Input fields, Textareas, Dropdown lists, etc
 				----------------------------------------*/
+				.form_h th {
+					background: none;
+					color: #484848;
+					border:none;
+					text-align: right;
+				}
+
+				.form_h td {
+					border: none;
+					background: none;
+				}
+
+				.form_h textarea {
+					width: 70%;
+					height: 150px;
+				}
+
+				.vat {
+					vertical-align: top;
+				}
+
 				label{
 					display:block;
 					padding-bottom:3px;
 					}
 							
-				label.inline{
+				label.inline,.form_h label{
 					display:inline;
 					}	
 					
@@ -430,6 +455,7 @@ body{
 				----------------------------------------*/				
 				#top table{
 					margin-bottom:30px;	
+					border-collapse: collapse;
 					}
 				
 				#table_fixed {
@@ -474,7 +500,7 @@ body{
 				}
 				
 				th {
-					border-color:#959595 #959595 #959595 #FFFFFF;
+					border-color:#959595 ;
 					border-style:solid;
 					border-width:1px;
 					color:#fff;
@@ -493,8 +519,7 @@ body{
 				}
 				
 				td {
-					border-right: 1px solid #959595;
-					border-bottom: 1px solid #959595;
+					border: 1px solid #959595;
 					background: #fff;
 					padding: 6px 6px 6px 12px;
 					color: #484848;
@@ -513,7 +538,6 @@ body{
 				
 				th.specalt {
 					border-left: 1px solid #959595;
-					border-top: 0;
 					font-weight:bold;
 					font-size: 10px;
 				}
