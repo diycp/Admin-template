@@ -7,7 +7,7 @@ th {
 	background:#a8b2c5 url(../images/highlight_line.gif) repeat-x scroll 0 0;
 }
 
-td.alt {
+td.alt,.odd th,.odd td {
 	background: #eceff5 url(../images/highlight_line.gif) repeat-x scroll 0 0;
 	color: #797268;
 }

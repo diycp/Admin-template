@@ -5,16 +5,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="description" content="Reflect Template" />
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-        <title>Flexy Admin</title>
-        <link rel="stylesheet" href="css/style_all.css" type="text/css" media="screen" />
+        <title>消息工具</title>
         
-        
-        
-        <!-- to choose another color scheme uncomment one of the foloowing stylesheets and wrap styl1.css into a comment -->
-        <link rel="stylesheet" href="css/style8.css" type="text/css" media="screen" />
-        
-        <link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/jquery.wysiwyg.css" type="text/css" media="screen" />
         
         <!--Internet Explorer Trancparency fix-->
         <!--[if IE 6]>
@@ -24,193 +16,22 @@
         </script>
         <![endif]--> 
         
-        <script type='text/javascript' src='js/jquery.js'></script>
-        <script type='text/javascript' src='js/jquery-ui.js'></script>
-        <script type='text/javascript' src='js/jquery.wysiwyg.js'></script>
+        <script type='text/javascript' src='js/all-ck.js'></script>
         <script type='text/javascript' src='js/custom.js'></script>
     </head>
-    
-    <body>
-        <div id="top">
-        
-            <div id="head">
-            	<h1 class="logo">
-                	<a href="">flexy - adjustable admin skin</a>
-                </h1>
-                
-                <div class="head_memberinfo">
-                	<div class="head_memberinfo_logo">
-                    	<span>1</span>
-                    	<img src="images/unreadmail.png" alt=""/>
-                    </div>
-                    
-                    <span class='memberinfo_span'>
-                   		 Welcome <a href="">Admin</a>
-                    </span>
-                    
-                    <span class='memberinfo_span'>
-                    	<a href="">Settings</a>
-                    </span>
-                    
-                    <span>
-                    	<a href="login.html">logout</a>
-                    </span>
-                    
-                    <span class='memberinfo_span2'>
-                    	<a href="">1 Private Message recieved</a>
-                    </span>
-                </div><!--end head_memberinfo-->
-            
-            </div><!--end head-->
-           	
-            	<div id="bg_wrapper">
-                
-                    <div id="main">
-                        <div id="content">
-                            <h2>ECMall 动态</h2>
-                            <div>
-                                <p>
-                                    ECMall 2.2.1 发布，期待您参与测试。2010-09-28 
-                                    <a href="">查看详情</a> <a href="">BUG反馈</a>
-                                </p>
-                                <p>
-                                    ECMall 安全补丁，V2.1和V2.2用户务必更新！2010-07-19
-                                    <a href="">查看详情</a>
-                                </p>
-                            </div>
-                            <h2>一周动态</h2>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <th class="specalt">新增会员数:  </th>
-                                        <td>3   </td>
-                                        <th class="specalt">新增店铺数/申请数:  </th>
-                                        <td>0/0</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="specalt">新增商品数:  </th>
-                                        <td>0   </td>
-                                        <th class="specalt">新增订单数:  </th>
-                                        <td>0</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <h2>统计信息</h2>
-                            <div>
-                               <table>
-                                   <tr>
-                                       <th class="specalt">会员总数: </th>
-                                       <td>3</td>
-                                       <th class="specalt">店铺总数/申请总数:  </th>
-                                       <td>1/0</td>
-                                   </tr>
-                                   <tr>
-                                       <th class="specalt">商品总数:</th>
-                                       <td>29  </td>
-                                       <th class="specalt">订单总数:</th>
-                                       <td>7</td>
-                                   </tr>
-                                   <tr>
-                                       <th class="specalt">订单总金额:  </th>
-                                       <td>¥1,165.00</td>
-                                   </tr>
-                               </table>
-                            </div>
-                            <h2>系统信息</h2>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <th class="specalt">服务器操作系统: </th>
-                                        <td>WINNT   WEB </td>
-                                        <th class="specalt">服务器:</th>
-                                        <td>Apache/2.2.9 (APMServ) PHP/5.2.6</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="specalt">PHP 版本: </th>
-                                        <td>5.2.6   </td>
-                                        <th class="specalt">MYSQL 版本:   </th>
-                                        <td>5.1.28-rc-community-log</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="specalt">ECMall 版本:</th>
-                                        <td>2.2.1 20100928  </td>
-                                        <th class="specalt">安装日期:</th>
-                                        <td>2012-08-09</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <!--end content-->
-                        
-                    </div><!--end main-->
-                    
-                    <div id="sidebar">
-                            <ul class="nav">
-                                <li><a class="headitem item1" href="#">Dashboard</a>
-                                    <ul class="opened"><!-- ul items without this class get hiddden by jquery-->
-                                    <li><a href="#">Menu Manager</a></li>
-                                    <li><a href="#">Script Pages</a></li>
-                                    <li class="current"><a href="#">Plugin Manager</a></li>
-                                    <li><a href="#">User Manager</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="headitem item2" href="#">Settings</a>
-                                    <ul>
-                                    <li><a href="#">Post settings</a></li>
-                                    <li><a href="#">User settings</a></li>
-                                    <li><a href="#">Permalink Structure</a></li>
-                                    </ul>                            
-                                </li>
-                                <li><a class="headitem item4" href="#">Edit</a>
-                                    <ul>
-                                    <li><a href="#">Edit Posts</a></li>
-                                    <li><a href="#">Edit Pages</a></li>
-                                    <li><a href="#">Edit Links</a></li>
-                                    <li><a href="#">Edit Menu Items</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="headitem item5" href="#">Search Site</a>
-                                    <ul>
-                                    <li><a href="#">Basic Search</a></li>
-                                    <li><a href="#">Advanced Search</a></li>
-                                    <li><a href="#">Search Option</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="headitem item6" href="#">Deleted Items</a>
-                                    <ul>
-                                    <li><a href="#">Content</a></li>
-                                    <li><a href="#">Images</a></li>
-                                    <li><a href="#">Audio</a></li>
-                                    <li><a href="#">Video</a></li>
-                                    <li><a href="#">PDF</a></li>
-                                    <li><a href="#">Scripts</a></li>
-                                    <li><a href="#">Other</a></li>
-                                    </ul>
-                                </li>
-                            </ul><!--end subnav-->
-                            
-                          <div class="flexy_datepicker"></div>
-                           
-                           <ul>
-                           <li><a class="headitem item7" href="#">Task Manager</a>
-                                    <ul>
-                                    <li><a href="#">Write Blogpost</a></li>
-                                    <li><a href="#">Script Pages</a></li>
-                                    <li><a href="#">Meeting at 8.00</a></li>
-                                    </ul>
-                                </li>
-                           </ul>     
-                            
-                        </div><!--end sidebar-->
-                        
-                     </div><!--end bg_wrapper-->
-                     
-                <div id="footer">
-                
-                </div><!--end footer-->
-                
-        </div><!-- end top -->
-        
-    </body>
-    
+<body>
+	<h2>Directory listing for /</h2>
+	<ul>
+		<li><a href="login.html">登录</a></li>
+		<li><a href="home.html">主页</a></li>
+		<li><a href="form_h.html">表单－字段水平</a></li>
+		<li><a href="form_v.html">表单－字段垂直</a></li>
+		<li><a href="imgmanage.html">图片列表</a></li>
+		<li><a href="msgtool.html">弹出消息</a></li>
+		<li><a href="response.html">消息反馈页面</a></li>
+		<li><a href="tab.html">标签页</a></li>
+		<li><a href="table.html">列表页</a></li>
+		<li><a href="sample.html">原始样本页</a></li>
+	</ul>
+</body>
 </html>

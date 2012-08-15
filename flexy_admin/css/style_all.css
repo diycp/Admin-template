@@ -18,6 +18,7 @@ body, ul, ol, h1,h2,h3,h4,h5,h6,form,li,p{
 			2.2.3.3) Input fields, Textareas, Dropdown lists, etc
 			2.2.3.4) Tables
 			2.2.3.5) Response Messages
+			2.2.3.6) pagination
 3.) Footer
 4.) Fonts, Images basic selectors
 5.) Containers and classes created by jquery
@@ -104,7 +105,7 @@ html{
 
 body{
 	font-size:12px;
-	font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+	font-family: "Microsoft YaHei", Georgia, "Times New Roman", Times, sans-serif;
 	line-height:1.5em;
 	color:#484848;
 	position:relative;
@@ -161,7 +162,7 @@ html body {
 		right:40px;
 		top:20px;
 		z-index:2;
-		font-size:11px;
+		font-size:12px;
 		line-height:13px;
 		}
 		
@@ -303,7 +304,7 @@ html body {
 					padding:15px;
 					margin:0 10px 10px 0;
 					background:#eaeaea url(../images/highlight_line.gif) repeat-x top left;
-					font-size:11px;
+					font-size:12px;
 					line-height:1.4em;
 					text-decoration:none;
 					color:#a1a1a1;
@@ -388,16 +389,12 @@ html body {
 					color: #484848;
 					border:none;
 					text-align: right;
+					white-space: nowrap;
 				}
 
 				.form_h td {
 					border: none;
 					background: none;
-				}
-
-				.form_h textarea {
-					width: 70%;
-					height: 150px;
 				}
 
 				.vat {
@@ -412,32 +409,121 @@ html body {
 				label.inline,.form_h label{
 					display:inline;
 					}	
-					
+
+
+				.input-small, .input-medium, .input-big, .input-flex{
+					height:14px;
+				}
 				.input-small, .input-medium, .input-big, .input-flex, select, textarea{
 					padding:5px;
 					border:1px solid #959595;
 					font-size:12px;
-					font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+					font-family: "Microsoft YaHei", Georgia, "Times New Roman", Times, sans-serif;
 					background-color:#eaeaea;
 					color:#333;
+					vertical-align: middle;
 					}
 				.input-small{width:120px;}
 				.input-medium{width:240px;} 
 				.input-big{width:480px;} 
 				.input-flex{width:70%;}
 				
+				.area-small{height:60px;}
+				.area-medium{height:120px;}
+				.area-big{height:240px;} 
+
+				.fileWraper {
+					position: relative;
+					overflow: hidden;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				.customFile {
+					cursor:pointer;
+					position: absolute;
+					top:0;
+					left:0;
+					display: block;
+					width:100%;
+					height:100%;
+					opacity:0;
+				}
+
+				.imgUploadManager .fileWraper {
+					margin-bottom: 10px;
+				}
+
+				.imgManage {
+					font-size:0;
+					margin:0 -5px 10px;
+				}
+				.imgManage li {
+					font-size: 12px;
+					display: inline-block;
+					text-align: right;
+					width:130px;
+					margin: 0 5px 10px;
+				}
+				.imgManage li span {
+					display: block;
+					text-align: left;
+					overflow:hidden;
+					text-overflow:ellipsis;
+				}
+				.imgManage li img,.imgManage li .img {
+					display: block;
+					width: 120px;
+					height: 90px;
+					padding: 4px;
+					background: #fff;
+					border:1px solid #959595;
+					margin:0 0 5px;
+				}
+
+				.imgUploadManager label {
+					display: inline-block;
+				}
+				.imgUploadManager .imgManage li img,.imgUploadManager .imgManage li .img {
+					width: 60px;
+					height: 45px;
+				}
+				.imgManage .img span {
+					display: block;
+					height: 100%;
+					filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);
+				}
+				.imgUploadManager .imgManage li {
+					width: 70px;
+				}
+
+				.imgManage li {
+					*display: inline;
+				}
+
+				.imgManage a {
+					cursor:pointer;
+				}
+
 				textarea, iframe , .wysiwyg{
 					overflow:auto;
 					}
 					
+				select {
+					background-color: transparent;
+				}
+				input,select,button {
+					vertical-align: middle;
+				}
 				.button{
 					border:1px solid #959595;
 					font-size:12px;
-					font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
+					font-family: "Microsoft YaHei", Georgia, "Times New Roman", Times, sans-serif;
 					background-color:#eaeaea;
-					padding:5px 15px;
+					padding:0 15px;
 					color:#fff;
 					cursor:pointer;
+					height:26px;
+					vertical-align: middle;
 					}
 					
 				.button:hover{
@@ -458,42 +544,42 @@ html body {
 					border-collapse: collapse;
 					}
 				
-				#table_fixed {
+				.table_fixed {
 				width: 470px;
 				padding: 0;
 				margin: 0;
-				font-size:11px;
+				font-size:12px;
 				}
 				
-				#table_fixed caption {
+				.table_fixed caption {
 					padding: 0 0 5px 0;
 					width: 470px;	 
 					text-align: right;
 				}
 				
-				#table_liquid {
+				.table_liquid {
 				width: 100%;
 				padding: 0;
 				margin: 0;
-				font-size:11px;
+				font-size:12px;
 				clear:both;
 				}
 				
-				#table_liquid caption {
+				.table_liquid caption {
 					padding: 0 0 5px 0;
 					width: 100%;	 
 					text-align: right;
 				}
 				
-				#table_auto {
+				.table_auto {
 				width: auto;
 				padding: 0;
 				margin: 0;
-				font-size:11px;
+				font-size:12px;
 				clear:both;
 				}
 				
-				#table_auto caption {
+				.table_auto caption {
 					padding: 0 0 5px 0;
 					width:auto;	 
 					text-align: right;
@@ -527,23 +613,46 @@ html body {
 				
 				
 				
-				th.spec {
+				th.spec,.even th {
 					border-left: 1px solid #959595;
 					border-top: 0;
-					background: #fff url(../images/bullet2.gif) no-repeat;
+					background: #fff; 
 					font-weight:bold;
-					font-size: 10px;
+					font-size:12px;
 					color:#484848;
 				}
 				
 				th.specalt {
 					border-left: 1px solid #959595;
 					font-weight:bold;
-					font-size: 10px;
+					font-size:12px;
+				}
+
+				th.min {
+					width:1px;
+					white-space: nowrap;
+				}	
+
+				.sort {
+					display:block;
+					padding-right: 14px
+				}
+
+				.sort:hover {
+					background: url(../images/asc.png) right center no-repeat;
+				}
+
+				.asc {
+					display: block;
+					background: url(../images/asc.png) right center no-repeat;
+					padding-right: 15px;
 				}
 				
-				
-				
+				.desc,.asc:hover {
+					display: block;
+					background: url(../images/desc.png) right center no-repeat;
+					padding-right: 15px;
+				}
 				/*----------------------------------------
 				2.2.3.5) Response Messages
 				----------------------------------------*/
@@ -592,7 +701,38 @@ html body {
 				.tip p{
 					background:transparent url(../images/24_information.png) no-repeat scroll 15px 17px;
 					}
+
+					/*----------------------------------------
+				2.2.3.6) pagination
+				----------------------------------------*/	
+				.pagination {
+					text-align: right;
+					padding: 20px 0 5px 0;
+					font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size:12px;
+				}
+				.pagination a {
+					margin: 0 5px 0 0;
+					padding: 3px 6px;
+					border-radius: 4px;
+					text-decoration: none;
+					color:#a8b2c5;
+				}
+
+				.pagination a.number {
+					border: 1px solid #ddd;
+				}
+
+				.pagination a.current {
+					background: #A8B2C5 ;
+					border-color: #ECEFF5 ;
+					color: #fff ;
+				}
 				
+				.pagination a.current:hover {
+					text-decoration: underline;
+				}
+
 				
 /*----------------------------------------
 3.) Footer
@@ -705,7 +845,7 @@ font-style:italic;
 	}
 	
 #top .flexy_datepicker{
-	font-size:11px;
+	font-size:12px;
 	margin-bottom:25px;
 	}
 	
@@ -715,6 +855,12 @@ font-style:italic;
 	
 #top .ui-datepicker {
 padding:0.2em;
+}
+.flexy_datepicker_input {
+	padding-right: 25px;
+	background-image:url(../images/calendar_alt_fill_16x16.png);
+	background-position:98% center;
+	background-repeat:no-repeat;
 }
 
 #top #sidebar .ui-datepicker{

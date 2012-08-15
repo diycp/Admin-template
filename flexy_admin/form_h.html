@@ -5,16 +5,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="description" content="Reflect Template" />
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-        <title>Flexy Admin</title>
+        <title>表单-字段名水平</title>
         <link rel="stylesheet" href="css/style_all.css" type="text/css" media="screen" />
         
         
         
         <!-- to choose another color scheme uncomment one of the foloowing stylesheets and wrap styl1.css into a comment -->
         <link rel="stylesheet" href="css/style8.css" type="text/css" media="screen" />
-        
         <link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/jquery.wysiwyg.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="ueditor1_2_2_0-utf8-php/themes/default/ueditor.css" type="text/css" media="screen" />
         
         <!--Internet Explorer Trancparency fix-->
         <!--[if IE 6]>
@@ -24,9 +23,7 @@
         </script>
         <![endif]--> 
         
-        <script type='text/javascript' src='js/jquery.js'></script>
-        <script type='text/javascript' src='js/jquery-ui.js'></script>
-        <script type='text/javascript' src='js/jquery.wysiwyg.js'></script>
+        <script type='text/javascript' src='js/all-ck.js'></script>
         <script type='text/javascript' src='js/custom.js'></script>
     </head>
     
@@ -35,7 +32,7 @@
         
             <div id="head">
             	<h1 class="logo">
-                	<a href="">flexy - adjustable admin skin</a>
+                	<a href=""></a>
                 </h1>
                 
                 <div class="head_memberinfo">
@@ -45,19 +42,19 @@
                     </div>
                     
                     <span class='memberinfo_span'>
-                   		 Welcome <a href="">Admin</a>
+                   		 欢迎 <a href="">管理员</a>
                     </span>
                     
                     <span class='memberinfo_span'>
-                    	<a href="">Settings</a>
+                    	<a href="">设置</a>
                     </span>
                     
                     <span>
-                    	<a href="login.html">logout</a>
+                    	<a href="login.html">登出</a>
                     </span>
                     
                     <span class='memberinfo_span2'>
-                    	<a href="">1 Private Message recieved</a>
+                    	<a href="">1 条私信</a>
                     </span>
                 </div><!--end head_memberinfo-->
             
@@ -67,14 +64,16 @@
                 
                     <div id="main">
                         <div id="content">
-                            <form method="post" class="form_h" >
+                            <h2>水平状的表单</h2>
+                            <form method="post">
+                                <!-- form_h类用于格式化水平排列的表单 -->
                                 <table class="form_h">
                                     <tr>
                                         <th>
-                                            <label for="name">Name</label>
+                                            <label for="name">姓名</label>
                                         </th>
                                         <td>
-                                            <input class="input-small" type="text" value="" name="name" id="name"/>
+                                            <input class="input-small" type="text" value="input-small" name="name" id="name"/>
                                         </td>
                                     </tr>
 
@@ -83,54 +82,54 @@
                                             <label for="mail">E-Mail</label>
                                         </th>
                                         <td>
-                                            <input class="input-medium" type="text" value="" name="mail" id="mail"/>
+                                            <input class="input-medium" type="text" value="input-medium" name="mail" id="mail"/>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th>
-                                            <label for="url">Your Website </label>
+                                            <label for="url">个人站</label>
                                         </th>
                                         <td>
-                                            <input class="input-big" type="text" value="" name="url" id="url"/>
+                                            <input class="input-big" type="text" value="input-big" name="url" id="url"/>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th>
-                                            <label for="flex">Flexfield </label>
+                                            <label for="flex">柔软的区域</label>
                                         </th>
                                         <td>
-                                            <input class="input-flex" type="text" value="" name="flex" id="flex"/>
+                                            <input class="input-flex" type="text" value="input-flex" name="flex" id="flex"/>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th>
-                                            <label for="date">Date</label>
+                                            <label for="date">日期</label>
                                         </th>
                                         <td>
-                                            <input class="input-small flexy_datepicker_input" type="text" value="__ / __ / ____" name="flexy_datepicker" id="date"/>
+                                            <input class="input-small flexy_datepicker_input" type="text" value="" name="flexy_datepicker" id="date"/>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th>
-                                            <label for="selectbox">List</label>
+                                            <label for="selectbox">列表</label>
                                         </th>
                                         <td>
                                             <select name="selectbox" id="selectbox" >
-                                                <option value="">Choose an option</option>
-                                                <option value="1">Home</option>
-                                                <option value="2">Member</option>
-                                                <option value="3">Portfolio</option>
-                                                <option value="4">Blog</option>
+                                                <option value="">选择一个项目</option>
+                                                <option value="1">主页</option>
+                                                <option value="2">成员</option>
+                                                <option value="3">公文包</option>
+                                                <option value="4">博客</option>
                                             </select>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <th>Radio</th>
+                                        <th>单选</th>
                                         <td>
                                             <label for="radiobutton1" class="inline">True</label>
                                             <input id="radiobutton1" name="radiobutton" type="radio" value="1" class="jquery_improved" checked="checked"/>
@@ -141,7 +140,7 @@
                                     </tr>
 
                                     <tr>
-                                        <th>Checkbox</th>
+                                        <th>多选</th>
                                         <td>
                                             <label for="checkbox1" class="inline">True</label>
                                             <input type="checkbox" value="1" name="checkbox1" id="checkbox1" />
@@ -149,25 +148,102 @@
                                             <input type="checkbox" value="2" name="checkbox2" id="checkbox2" />
                                         </td>
                                     </tr>
-
+                                    <tr>
+                                        <th>文件</th>
+                                        <td><input type="file" /></td>
+                                    </tr>
                                     <tr>
                                        <th class="vat">
-                                           <label for="textarea">Enter some Text</label>
+                                           <label for="textarea">写点儿字</label>
                                        </th>
                                        <td>
-                                           <textarea name="textarea" id="textarea"></textarea>
+                                           <textarea name="textarea" id="textarea" class="area-small">area-small</textarea>
+                                           <textarea name="textarea" id="textarea" class="area-medium">area-medium</textarea>
+                                           <textarea name="textarea" id="textarea">default</textarea>
+                                           <textarea name="textarea" id="textarea" class="area-big">area-big</textarea>
                                        </td>
                                    </tr>
 
                                    <tr>
                                        <th class="vat">
-                                           <label for="textarea2">Rich text</label>
+                                           <label for="textarea2">富文本</label>
                                        </th>
                                        <td>
-                                           <textarea name="textarea" id="textarea2" class="richtext" cols="60" rows="15"></textarea>
+                                            <!-- 在custom.js中，所有uEditor类的容器都将被初始化为uEditor -->
+                                           <script type="text/plain" class="uEditor" name="editorValue">待编辑的文本</script>
                                        </td>
                                    </tr>
-
+                                   <tr>
+                                        <th class="vat">图片</th>
+                                        <td class="imgUploadManager">
+                                            <input type="file" name="ooxx[]"/>
+                                            <label><input type="checkbox" class="checkAll"/>全选</label>
+                                            <label><button class="delAll">删除</button></label>
+                                            <ul class="imgManage">
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://upload.chinaz.com/upimg/allimg/100729/1210000.jpg" alt="" />
+                                                    <input type="checkbox" />
+                                                    <a>删除</a>
+                                                </li>
+                                            </ul>
+                                            
+                                        </td>
+                                    </tr>
                                    <tr>
                                     <th></th>
                                     <td>
@@ -183,45 +259,45 @@
                     
                     <div id="sidebar">
                             <ul class="nav">
-                                <li><a class="headitem item1" href="#">Dashboard</a>
+                                <li><a class="headitem item1" href="#">仪表盘</a>
                                     <ul class="opened"><!-- ul items without this class get hiddden by jquery-->
-                                    <li><a href="#">Menu Manager</a></li>
-                                    <li><a href="#">Script Pages</a></li>
-                                    <li class="current"><a href="#">Plugin Manager</a></li>
-                                    <li><a href="#">User Manager</a></li>
+                                    <li><a href="#">菜单管理</a></li>
+                                    <li><a href="#">脚本页</a></li>
+                                    <li class="current"><a href="#">插件管理</a></li>
+                                    <li><a href="#">用户管理</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="headitem item2" href="#">Settings</a>
+                                <li><a class="headitem item2" href="#">设置</a>
                                     <ul>
-                                    <li><a href="#">Post settings</a></li>
-                                    <li><a href="#">User settings</a></li>
-                                    <li><a href="#">Permalink Structure</a></li>
+                                    <li><a href="#">日志设置</a></li>
+                                    <li><a href="#">用户设置</a></li>
+                                    <li><a href="#">找不到结果构建</a></li>
                                     </ul>                            
                                 </li>
-                                <li><a class="headitem item4" href="#">Edit</a>
+                                <li><a class="headitem item4" href="#">编辑</a>
                                     <ul>
-                                    <li><a href="#">Edit Posts</a></li>
-                                    <li><a href="#">Edit Pages</a></li>
-                                    <li><a href="#">Edit Links</a></li>
-                                    <li><a href="#">Edit Menu Items</a></li>
+                                    <li><a href="#">编辑日志</a></li>
+                                    <li><a href="#">编辑页面</a></li>
+                                    <li><a href="#">编辑链接</a></li>
+                                    <li><a href="#">编辑菜单元素</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="headitem item5" href="#">Search Site</a>
+                                <li><a class="headitem item5" href="#">站点搜索</a>
                                     <ul>
-                                    <li><a href="#">Basic Search</a></li>
-                                    <li><a href="#">Advanced Search</a></li>
-                                    <li><a href="#">Search Option</a></li>
+                                    <li><a href="#">基础搜索</a></li>
+                                    <li><a href="#">高级搜索</a></li>
+                                    <li><a href="#">搜索设置</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="headitem item6" href="#">Deleted Items</a>
+                                <li><a class="headitem item6" href="#">已删除项目</a>
                                     <ul>
-                                    <li><a href="#">Content</a></li>
-                                    <li><a href="#">Images</a></li>
-                                    <li><a href="#">Audio</a></li>
-                                    <li><a href="#">Video</a></li>
+                                    <li><a href="#">内容</a></li>
+                                    <li><a href="#">图片</a></li>
+                                    <li><a href="#">音频</a></li>
+                                    <li><a href="#">视频</a></li>
                                     <li><a href="#">PDF</a></li>
-                                    <li><a href="#">Scripts</a></li>
-                                    <li><a href="#">Other</a></li>
+                                    <li><a href="#">脚本</a></li>
+                                    <li><a href="#">其他</a></li>
                                     </ul>
                                 </li>
                             </ul><!--end subnav-->
@@ -229,11 +305,11 @@
                           <div class="flexy_datepicker"></div>
                            
                            <ul>
-                           <li><a class="headitem item7" href="#">Task Manager</a>
+                           <li><a class="headitem item7" href="#">任务管理</a>
                                     <ul>
-                                    <li><a href="#">Write Blogpost</a></li>
-                                    <li><a href="#">Script Pages</a></li>
-                                    <li><a href="#">Meeting at 8.00</a></li>
+                                    <li><a href="#">写博客</a></li>
+                                    <li><a href="#">脚本页</a></li>
+                                    <li><a href="#">8:00和妹子约会</a></li>
                                     </ul>
                                 </li>
                            </ul>     
