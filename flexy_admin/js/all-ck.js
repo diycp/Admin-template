@@ -292,7 +292,7 @@ jQuery(function($){
         //,readonly : false /编辑器初始化结束后,编辑区域是否是只读的，默认是false
 
 
-        //,zIndex : 900     //编辑器层级的基数,默认是900
+        ,zIndex : 0     //编辑器层级的基数,默认是900
 
 
         //,imagePopup:true      //图片操作的浮层开关，默认打开
@@ -454,12 +454,12 @@ jQuery(function($){
 
         //autoHeightEnabled
         // 是否自动长高,默认true
-        //,autoHeightEnabled:true
+        ,autoHeightEnabled:false
 
 
         //autoFloatEnabled
         //是否保持toolbar的位置不动,默认true
-        //,autoFloatEnabled:true
+        ,autoFloatEnabled:false
 
 
         //indentValue
