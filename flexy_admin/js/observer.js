@@ -21,7 +21,7 @@
 		//为所有有data-source属性的元素在dataChange时发起ajax请求
 		root.on("dataChange", "[data-source]", function(e, data) {
 			var that = $(this);
-			$.get(that.data("source"), data, null, "json").done(function(data) {
+			$.post(that.data("source"), data, null, "json").done(function(data) {
 				that.trigger("dataRender", data);
 			});
 		});
