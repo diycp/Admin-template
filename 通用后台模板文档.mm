@@ -107,6 +107,7 @@
 <node CREATED="1345188276096" ID="ID_845220281" MODIFIED="1345188292669" TEXT="&#x9644;&#x5e26;&#x88ab;&#x89c2;&#x5bdf;&#x8005;&#x4f20;&#x9012;&#x6765;&#x7684;&#x53c2;&#x6570;"/>
 <node CREATED="1345188293117" ID="ID_738792878" MODIFIED="1345188300565" TEXT="&#x8bf7;&#x6c42;&#x4f7f;&#x7528;post&#x65b9;&#x6cd5;"/>
 <node CREATED="1345188304152" ID="ID_744670019" MODIFIED="1345188315733" TEXT="&#x8bf7;&#x6c42;&#x6210;&#x529f;&#x4f1a;&#x629b;&#x51fa;dataRender&#x4e8b;&#x4ef6;"/>
+<node CREATED="1345193321325" ID="ID_1410965902" MODIFIED="1345193395180" TEXT="&#x5982;&#x679c;&#x9700;&#x8981;&#x4e00;&#x5f00;&#x59cb;&#x5c31;&#x8fdb;&#x884c;ajax&#x67e5;&#x8be2;&#xff0c;&#x5219;&#x624b;&#x52a8;&#x8c03;&#x7528;&#x4e00;&#x6b21;trigger(&quot;dataChange&quot;)&#x5373;&#x53ef;"/>
 </node>
 <node CREATED="1345188325426" ID="ID_771102710" MODIFIED="1345188333235" TEXT="data-template-name">
 <node CREATED="1345188335111" ID="ID_1701013087" MODIFIED="1345188341315" TEXT="&#x8bbe;&#x7f6e;&#x5728;&#x89c2;&#x5bdf;&#x8005;&#x4e0a;"/>

@@ -35,7 +35,6 @@ body.nobackground{ /*Login page doesnt need a background-image*/
 
 #login{
 	background:#FFFFFF url(../images/scheme1/bg.jpg) repeat-x scroll 0 -20px;
-	height:360px;
 	margin:0 auto;
 	padding:25px;
 	position:relative;
