@@ -24,6 +24,7 @@
         <![endif]--> 
         
         <script type='text/javascript' src='js/all-ck.js'></script>
+        <script type='text/javascript' src='ueditor1_2_2_0-utf8-php/editor_config.js'></script>
         <script type='text/javascript' src='js/custom.js'></script>
     </head>
     
@@ -126,24 +127,39 @@
                                             <label for="selectbox">列表</label>
                                         </th>
                                         <td>
-                                            <select name="selectbox" id="selectbox" >
-                                                <option value="">选择一个项目</option>
+                                            <!-- data-observer属性指定观者，onchange时会抛出dataChange事件通知他们 -->
+                                            <!-- data-source属性指数据源，dataChange时会向该数据源请求json数据,若请求成功会抛出一个dataRender事件 -->
+                                            <!-- data-template-name属性指定模板名，将用dataRender事件中得到的数据来渲染模板,渲染完成后抛出onchange事件以通知它的观察者(如果有) -->
+                                            <select name="selectbox" id="selectbox_A" data-observer="#selectbox_B" data-source="json/listdata.json" data-template-name="option">
+                                                <option value="0">#selectbox_A</option>
                                                 <option value="1">主页</option>
                                                 <option value="2">成员</option>
                                                 <option value="3">公文包</option>
                                                 <option value="4">博客</option>
                                             </select>
+                                            <select name="selectbox" id="selectbox_B" data-source="json/listdata.json" data-template-name="option">
+                                                <option value="">#selectbox_B</option>
+                                            </select> 
+                                            这个例子设定selectbox_B观察selectbox_A的change
+                                            <!-- juicer模板，有name属性以供调用。juicer的文档位于http://juicer.name/-->
+                                            <script type="text/juicer" name="option">
+                                                {@each list as item}
+                                                <option value="${item.value}">${item.text}</option>
+                                                {@/each}
+                                            </script>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th>单选</th>
-                                        <td>
+                                        <!-- 多个表单项可在他们的父节点上设置观察者 -->
+                                        <td data-observer="#selectbox_A">
                                             <label for="radiobutton1" class="inline">True</label>
                                             <input id="radiobutton1" name="radiobutton" type="radio" value="1" class="jquery_improved" checked="checked"/>
                                             
                                             <label for="radiobutton2" class="inline">False</label>
                                             <input id="radiobutton2" name="radiobutton" type="radio" value="2" class="jquery_improved"/>
+                                            这个例子设定selectbox_A观察这组单选按钮的change
                                         </td>
                                     </tr>
 

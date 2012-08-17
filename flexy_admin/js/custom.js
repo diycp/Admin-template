@@ -8,11 +8,13 @@ $(document).ready(function(){
 	$("#dialog").dialog(); //pop up dialog window on pageopen.
 
 	// 初始化uEditor
-	window.UEDITOR_CONFIG.UEDITOR_HOME_URL = "/ueditor1_2_2_0-utf8-php/";
-	$(".uEditor").each(function(){
-		var editor = new baidu.editor.ui.Editor();
-		editor.render(this);
-	});
+	if(window.UEDITOR_CONFIG){
+		window.UEDITOR_CONFIG.UEDITOR_HOME_URL = "/ueditor1_2_2_0-utf8-php/";
+		$(".uEditor").each(function(){
+			var editor = new baidu.editor.ui.Editor();
+			editor.render(this);
+		});
+	}
 
 	$("table.datalist").each(function(){
 		$("tbody tr:odd",this).addClass("odd");
