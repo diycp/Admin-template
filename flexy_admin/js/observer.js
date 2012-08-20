@@ -2,7 +2,7 @@
 	$(function() {
 		var root = $("body");
 		//当有change事件发生时，通知观察者触发dataChange事件。
-		root.on("change submit", "[data-observer]", function(e) {
+		root.on("change.observer submit.observer", "[data-observer]", function(e) {
 			var that = $(this);
 			if(that.is("form") && e.type=="change"){
 				return true;
@@ -19,7 +19,7 @@
 		});
 
 		//为所有有data-source属性的元素在dataChange时发起ajax请求
-		root.on("dataChange", "[data-source]", function(e, data) {
+		root.on("dataChange.observer", "[data-source]", function(e, data) {
 			var that = $(this);
 			$.post(that.data("source"), data, null, "json").done(function(data) {
 				that.trigger("dataRender", data);
@@ -27,7 +27,7 @@
 		});
 
 		//为所有data-template-name属性的元素绑定模板渲染事件
-		root.on("dataRender", "[data-template-name]", function(e, data) {
+		root.on("dataRender.observer", "[data-template-name]", function(e, data) {
 			var that = $(this);
 			if (!data) {
 				return false;
