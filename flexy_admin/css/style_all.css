@@ -513,6 +513,13 @@ html body {
 				input,select,button {
 					vertical-align: middle;
 				}
+				button {
+					height: 28px;
+					min-width: 60px;
+					_width: 60px;
+					white-space: nowrap;
+					padding: 0 15px;
+				}
 				.button{
 					border:1px solid #959595;
 					font-size:12px;
@@ -754,7 +761,26 @@ h1,h2,h3,h4,h5,h6{
 	}
 	
 h1{font-size:22px;}
-h2{font-size:20px; border-bottom:1px solid #c0c0c0; clear:both; margin-right:10px;}
+h2{font-size:20px; border-bottom:1px solid #c0c0c0; clear:both; margin-right:10px;position:relative;}
+h2 a,h2 span {
+	position: absolute;
+	right: 0;
+	bottom: 8px;
+	font-size: 12px;
+	line-height: 100%;
+	font-weight: normal;
+}
+
+h2 button {
+	position: absolute;
+	right: 0;
+	bottom: 8px;
+	font-size: 12px;
+	font-weight: normal;
+	bottom: 4px;
+	cursor: pointer;
+}
+
 h3{font-size:18px;}
 h4{font-size:17px;}
 h5{font-size:16px;}
