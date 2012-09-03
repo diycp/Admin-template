@@ -39,13 +39,15 @@ function kriesi_navigation(element) {
 	$(element).each(function() {
 		var currentlistitem;
 		currentlistitem = $(this).find(">li");
-
 		currentlistitem.each(function() {
-			if (!$(this).find('ul').hasClass('opened')) {
-				$(this).find('ul').addClass("closed").css({
-					display: "none"
-				});
+			var links = $("a[href]",this);
+			for(var i=0;i<links.length;i++){
+				if((new RegExp(links[i].href+"$")).test(location.href)){
+					$(links[i]).parent().addClass("current");
+					return true;
+				}
 			}
+			$(this).find('ul').addClass("closed").css({display: "none"});
 		});
 
 		currentlistitem.find('a:eq(0)').each(function() {
