@@ -3,6 +3,9 @@
 	var methods = {
 		ajaxRequest: function(e) {
 			var that = $(this);
+			if(that.is(":contains('删除')") && !confirm("确定删除吗？")){
+				return false;
+			}
 			var postArgu = getArgu = "";
 			if (e.type == "submit") {
 				postArgu = that.serializeArray();
